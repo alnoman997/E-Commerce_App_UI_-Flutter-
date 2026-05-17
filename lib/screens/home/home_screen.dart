@@ -68,11 +68,15 @@ class _HomeScreenState extends State<HomeScreen> {
             child: PageView(
               children: [
 
+                // this for loop is used for showing 4 banners by one command.
+                for (String banner in banners)
+                  ItemBanner(image: banner),
+/*
                ItemBanner(image: 'banner0.jpg'),
                ItemBanner(image: 'banner1.jpg'),
                ItemBanner(image: 'banner2.jpg'),
                ItemBanner(image: 'banner3.jpg'),
-
+*/
               ],
             ),
           ),
@@ -85,6 +89,8 @@ class _HomeScreenState extends State<HomeScreen> {
               spacing: 10,
               children: [
 
+                // this for loop is used for making 4 indicators for 4 banners by one command.
+                for (String banner in banners)
                 Container(
                   height: 15, width: 15,
                   decoration: BoxDecoration(
@@ -93,7 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
 
-
+/*
                 Container(
                   height: 15, width: 15,
                   decoration: BoxDecoration(
@@ -118,6 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
 
+*/
 
               ],
             ),
