@@ -75,6 +75,45 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
 
+          // Image changing indicator.
+          SizedBox(
+            height: 30,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  height: 15, width: 15,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.grey.shade400,
+                  ),
+                ),
+                Container(
+                  height: 15, width: 15,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.grey.shade400,
+                  ),
+                ),
+                Container(
+                  height: 15, width: 15,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.grey.shade400,
+                  ),
+                ),
+                Container(
+                  height: 15, width: 15,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.grey.shade400,
+                  ),
+                ),
+
+
+              ],
+            ),
+          )
 
         ],
       ),
