@@ -33,12 +33,21 @@ class _HomeScreenState extends State<HomeScreen> {
 
       body: ListView(
         children: [
-          Container(
+
+
+          // we will use card instead of container for building the search bar here.
+
+          // Container(
+            // margin: EdgeInsets.all(15),
+            // decoration: BoxDecoration(
+            //   color: Colors.white,
+            //   borderRadius: BorderRadius.circular(10)
+            // ),
+
+          // Search Box.
+
+          Card(
             margin: EdgeInsets.all(15),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10)
-            ),
             child: TextField(
               decoration: InputDecoration(
                 hintText: 'Search',
@@ -48,7 +57,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 border: InputBorder.none
               ),
             ),
-          )
+          ),
+
+
         ],
       ),
 
