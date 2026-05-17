@@ -11,6 +11,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   List<String> banners = ['banner0.jpg', 'banner1.jpg', 'banner2.jpg', 'banner3.jpg' ];
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -66,6 +67,11 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(
             height: 150,
             child: PageView(
+              onPageChanged: (value) {
+                setState(() {
+                  currentIndex = value;
+                });
+              },
               children: [
 
                 // this for loop is used for showing 4 banners by one command.
@@ -90,9 +96,12 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
 
                 // this for loop is used for making 4 indicators for 4 banners by one command.
-                for (String banner in banners)
+
+                // for (String banner in banners)
+
+                for (int index = 0; index < banners.length; index++)
                 Container(
-                  height: 15, width: 15,
+                  height: currentIndex == index? 12: 8, width: currentIndex == index? 12: 8,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.grey.shade400,
