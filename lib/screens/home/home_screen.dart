@@ -1,3 +1,4 @@
+import 'package:e_commerce_app_ui/screens/home/widgets/item_banner.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -65,31 +66,10 @@ class _HomeScreenState extends State<HomeScreen> {
             child: PageView(
               children: [
 
-                Container(
-                  height: 150,
-                  margin: EdgeInsets.symmetric(horizontal: 15),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('assets/images/banner0.jpg')
-                      )
-                  ),
-                ),
-
-
-                Container(
-                  height: 150,
-                  margin: EdgeInsets.symmetric(horizontal: 15),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: AssetImage('assets/images/banner1.jpg')
-                      )
-                  ),
-                )
-
+               ItemBanner(image: 'banner0.jpg'),
+               ItemBanner(image: 'banner1.jpg'),
+               ItemBanner(image: 'banner2.jpg'),
+               ItemBanner(image: 'banner3.jpg'),
 
               ],
             ),
