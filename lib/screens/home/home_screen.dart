@@ -30,6 +30,28 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
 
       ),
+
+      body: ListView(
+        children: [
+          Container(
+            margin: EdgeInsets.all(15),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10)
+            ),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'Search',
+                prefixIcon: Icon(CupertinoIcons.search),
+                suffixIcon: Icon(Icons.filter_list),
+                contentPadding: EdgeInsets.all(15),
+                border: InputBorder.none
+              ),
+            ),
+          )
+        ],
+      ),
+
     );
   }
 }
