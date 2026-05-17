@@ -100,11 +100,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 // for (String banner in banners)
 
                 for (int index = 0; index < banners.length; index++)
-                Container(
+                AnimatedContainer(
+                  duration: Duration(milliseconds: 300),
                   height: currentIndex == index? 12: 8, width: currentIndex == index? 12: 8,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Colors.grey.shade400,
+                    color: currentIndex == index? Colors.grey: Colors.grey.shade400,
                   ),
                 ),
 
@@ -137,6 +138,18 @@ class _HomeScreenState extends State<HomeScreen> {
 
               ],
             ),
+          ),
+
+          // Categories.
+          ListTile(
+            title: Text('Categories'),
+            trailing: Text('SHOW All', style: TextStyle(color: Colors.indigo)),
+          ),
+          ListView(
+            scrollDirection: Axis.horizontal,
+            children: [
+
+            ],
           )
 
         ],
