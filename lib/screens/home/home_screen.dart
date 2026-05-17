@@ -57,8 +57,11 @@ class _HomeScreenState extends State<HomeScreen> {
             child: TextField(
               decoration: InputDecoration(
                 hintText: 'Search',
+                hintStyle: TextStyle(fontWeight: FontWeight.w300),
                 prefixIcon: Icon(CupertinoIcons.search),
+                prefixIconColor: Colors.grey,
                 suffixIcon: Icon(Icons.filter_list),
+                suffixIconColor: Colors.grey,
                 contentPadding: EdgeInsets.all(15),
                 border: InputBorder.none
               ),
