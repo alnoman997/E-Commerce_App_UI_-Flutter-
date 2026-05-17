@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -11,6 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
           leading: Padding(
             padding: const EdgeInsets.all(10.0),
@@ -22,10 +24,11 @@ class _HomeScreenState extends State<HomeScreen> {
              padding: const EdgeInsets.only(right: 15),
              child: Badge(
                label: Text('11'),
-               child: Icon(Icons.notifications),
+               child: Icon(CupertinoIcons.bell, size: 26),
              ),
            )
         ],
+
       ),
     );
   }
