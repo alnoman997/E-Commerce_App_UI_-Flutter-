@@ -1,4 +1,6 @@
 import 'package:e_commerce_app_ui/screens/home/widgets/item_banner.dart';
+import 'package:e_commerce_app_ui/screens/home/widgets/item_category.dart';
+import 'package:e_commerce_app_ui/screens/home/widgets/item_product.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -149,13 +151,92 @@ class _HomeScreenState extends State<HomeScreen> {
             height: 100,
             child: ListView(
               scrollDirection: Axis.horizontal,
+              padding: EdgeInsets.all(5),
               children: [
-
-
+                ItemCategory(title: 'Baby', image: 'baby.png', color: Colors.orange),
+                ItemCategory(title: 'automobile', image: 'automobile.png', color: Colors.blue),
+                ItemCategory(title: 'device', image: 'device.png', color: Colors.indigo),
+                ItemCategory(title: 'sports', image: 'sports.png', color: Colors.green),
+                ItemCategory(title: 'kitchen', image: 'kitchen.png', color: Colors.blueAccent),
+                ItemCategory(title: 'medical', image: 'medical.png', color: Colors.brown),
+                ItemCategory(title: 'Baby', image: 'baby.png', color: Colors.orange),
+                ItemCategory(title: 'automobile', image: 'automobile.png', color: Colors.blue),
+                ItemCategory(title: 'device', image: 'device.png', color: Colors.indigo),
+                ItemCategory(title: 'sports', image: 'sports.png', color: Colors.green),
+                ItemCategory(title: 'kitchen', image: 'kitchen.png', color: Colors.blueAccent),
+                ItemCategory(title: 'medical', image: 'medical.png', color: Colors.brown),
 
               ],
             ),
-          )
+          ),
+
+          // Products
+          ListTile(
+            title: Text('Products'),
+            trailing: Text('SHOW All', style: TextStyle(color: Colors.indigo)),
+          ),
+          GridView.count(
+              crossAxisCount: 2,
+            padding: EdgeInsets.symmetric(horizontal: 15),
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10,
+            shrinkWrap: true,
+            physics: NeverScrollableScrollPhysics(),
+            children: [
+
+              ItemProduct(title: 'Medical instruments combo. Three in one combo.',
+                  image: 'product1.jpeg',
+                  price: '15,000'
+              ),
+              ItemProduct(title: 'Medical syringe. Buy one and get one for free.',
+                  image: 'product2.jpeg',
+                  price: '50'
+              ),
+              ItemProduct(title: 'Tablet and Capsule. Made in Bangladesh.',
+                  image: 'product3.jpeg',
+                  price: '330'
+              ),
+              ItemProduct(title: 'Capsules made in Bangladesh for vitamin.',
+                  image: 'product4.jpeg',
+                  price: '185'
+              ),
+              ItemProduct(title: 'Digital Thermometer for capturing the temperature of body.',
+                  image: 'product5.jpeg',
+                  price: '1500'
+              ),
+              ItemProduct(title: 'Digital screens for ICU and CCU. Made in Japan.',
+                  image: 'product6.jpeg',
+                  price: '86,000'
+              ),
+              ItemProduct(title: 'Medical instruments combo. Three in one combo.',
+                  image: 'product1.jpeg',
+                  price: '15,000'
+              ),
+              ItemProduct(title: 'Medical syringe. Buy one and get one for free.',
+                  image: 'product2.jpeg',
+                  price: '50'
+              ),
+              ItemProduct(title: 'Tablet and Capsule. Made in Bangladesh.',
+                  image: 'product3.jpeg',
+                  price: '330'
+              ),
+              ItemProduct(title: 'Capsules made in Bangladesh for vitamin.',
+                  image: 'product4.jpeg',
+                  price: '185'
+              ),
+              ItemProduct(title: 'Digital Thermometer for capturing the temperature of body.',
+                  image: 'product5.jpeg',
+                  price: '1500'
+              ),
+              ItemProduct(title: 'Digital screens for ICU and CCU. Made in Japan.',
+                  image: 'product6.jpeg',
+                  price: '86,000'
+              ),
+
+
+            ],
+          ),
+
 
         ],
       ),
