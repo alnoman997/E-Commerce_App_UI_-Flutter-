@@ -10,6 +10,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<String> banners = ['banner0.jpg', 'banner1.jpg', 'banner2.jpg', 'banner3.jpg' ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,7 +82,9 @@ class _HomeScreenState extends State<HomeScreen> {
             height: 30,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 10,
               children: [
+
                 Container(
                   height: 15, width: 15,
                   decoration: BoxDecoration(
@@ -88,6 +92,8 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.grey.shade400,
                   ),
                 ),
+
+
                 Container(
                   height: 15, width: 15,
                   decoration: BoxDecoration(
@@ -95,6 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.grey.shade400,
                   ),
                 ),
+
                 Container(
                   height: 15, width: 15,
                   decoration: BoxDecoration(
@@ -102,6 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: Colors.grey.shade400,
                   ),
                 ),
+
                 Container(
                   height: 15, width: 15,
                   decoration: BoxDecoration(
