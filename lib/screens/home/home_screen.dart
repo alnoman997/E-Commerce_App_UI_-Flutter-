@@ -12,7 +12,20 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          leading: Image.asset('assets/icons/logo.png')
+          leading: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Image.asset('assets/icons/logo.png'),
+          ),
+        title: Text('E-Commerce Platform'),
+        actions: [
+           Padding(
+             padding: const EdgeInsets.only(right: 15),
+             child: Badge(
+               label: Text('11'),
+               child: Icon(Icons.notifications),
+             ),
+           )
+        ],
       ),
     );
   }
