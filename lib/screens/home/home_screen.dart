@@ -145,11 +145,16 @@ class _HomeScreenState extends State<HomeScreen> {
             title: Text('Categories'),
             trailing: Text('SHOW All', style: TextStyle(color: Colors.indigo)),
           ),
-          ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
+          SizedBox(
+            height: 100,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
 
-            ],
+
+
+              ],
+            ),
           )
 
         ],
